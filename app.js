@@ -44,12 +44,19 @@ const createStudentElement = ( { name, age, roll } ) => {
     studentAge.innerText = 'Student age: ' + age;
     studentRoll.innerText = 'Student roll: ' + roll;
 
+    // classes for DOM elements
+    studentSection.classList = `student-section student-${name}`
+
     // append student into to student container - Add to DOM
     studentSection.append(studentName, studentAge, studentRoll)
 
     // append student container to the main div - Add to DOM
     studentContainer.appendChild(studentSection)
+
+    studentContainer.style.display = students.length > 0 ? 'flex' : 'none'
 }
+
+studentContainer.style.display = students.length > 0 ? 'flex' : 'none'
 
 // loop through students array and run the createElement
 students.forEach(createStudentElement)

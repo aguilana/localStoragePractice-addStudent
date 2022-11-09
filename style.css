@@ -85,3 +85,12 @@
   .students div * {
     margin: 5px;
   }
+
+  /* My CSS */
+  .student-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
+  }
